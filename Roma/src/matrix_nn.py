@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
 
 def main():
-    a = open('24.txt').readlines()
+    a = open('../24.txt').readlines()
     matrix = []
     m = []
     for i in range(len(a)):
