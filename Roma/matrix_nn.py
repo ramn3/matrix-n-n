@@ -28,7 +28,6 @@ def main():
     m = []
     for i in range(len(a)):
         matrix.append(list(map(int, a[i].split(', '))))
-    #print(matrix)
     k = opr = 0
     while k != len(matrix):
         for i in range(len(matrix)):
