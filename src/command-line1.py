@@ -5,8 +5,6 @@ parser.add_argument("filename", help="Имя файла")
 
 args = parser.parse_args()
 
-print(f"Привет, {args.filename}!")
-
 
 with open(args.filename, 'r') as file:
     b = file.readlines()
