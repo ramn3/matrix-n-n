@@ -14,8 +14,8 @@ class transport(toy):
 
 
 class car(transport):
-    def __init__(self, name, x1):
-        super().__init__(name, x1)
+    def __init__(self, name, characteristic):
+        super().__init__(name, characteristic)
 
     def exat(self):
         print("машина")
@@ -23,8 +23,8 @@ class car(transport):
 
 
 class airplane(transport):
-    def __init__(self, name, x2):
-        super().__init__(name, x2)
+    def __init__(self, name, characteristic):
+        super().__init__(name,characteristic)
 
     def exat(self):
         print("самолет")
@@ -32,26 +32,26 @@ class airplane(transport):
 
 
 class ship(transport):
-    def __init__(self, name, x3):
-        super().__init__(name, x3)
+    def __init__(self, name, characteristic):
+        super().__init__(name,characteristic)
 
     def exat(self):
         print('корабль')
         print("плыву по воде")
 
 
-mashina = car('бэха', 'крутая')
-mashina.exat()
-print(mashina)
+car = car('бэха', 'крутая')
+car.exat()
+print(car)
 
 print()
 
-samolet = airplane('бизнесджет', 'ваще крутой')
-samolet.exat()
-print(samolet)
+airplane = airplane('бизнесджет', 'ваще крутой')
+airplane.exat()
+print(airplane)
 
 print()
 
-korabl = ship('катамаран', 'слишком крутой')
-korabl.exat()
-print(korabl)
+ship = ship('катамаран', 'слишком крутой')
+ship.exat()
+print(ship)
