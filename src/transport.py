@@ -1,9 +1,9 @@
-class toy:
+class Toy:
     def __init__(self, name):
         self.name = name
 
 
-class transport(toy):
+class Transport(Toy):
     def __init__(self, name, surname):
         super().__init__(name)
         self.name = name
@@ -13,45 +13,37 @@ class transport(toy):
         return f"транспорт - {self.name}, свойство - {self.surname}"
 
 
-class car(transport):
+class Car(Transport):
     def __init__(self, name, characteristic):
         super().__init__(name, characteristic)
 
     def exat(self):
-        print("машина")
-        print("еду по дороге")
+        return "еду по дороге"
 
 
-class airplane(transport):
+class Airplane(Transport):
     def __init__(self, name, characteristic):
-        super().__init__(name,characteristic)
+        super().__init__(name, characteristic)
 
     def exat(self):
-        print("самолет")
-        print("лечу по воздуху")
+        return "лечу по воздуху"
 
 
-class ship(transport):
+class Ship(Transport):
     def __init__(self, name, characteristic):
-        super().__init__(name,characteristic)
+        super().__init__(name, characteristic)
 
     def exat(self):
-        print('корабль')
-        print("плыву по воде")
+        return "плыву по воде"
 
 
-car = car('бэха', 'крутая')
-car.exat()
-print(car)
+transport = [
+    Car('бэха', 'крутая'),
+    Airplane('бизнесджет', 'ваще крутой'),
+    Ship('катамаран', 'слишком крутой')
+]
 
-print()
-
-airplane = airplane('бизнесджет', 'ваще крутой')
-airplane.exat()
-print(airplane)
-
-print()
-
-ship = ship('катамаран', 'слишком крутой')
-ship.exat()
-print(ship)
+for transport in transport:
+    print(f"{transport}")
+    print(f"{transport.exat()}")
+    print()
